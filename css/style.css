@@ -1,0 +1,133 @@
+body {
+    background: url(https://www.shutterstock.com/image-illustration/basketball-sport-arena-interior-view-600nw-1928721584.jpg);
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+header {
+    font-size:xx-large;
+    font-style: bold;
+    text-transform: uppercase;
+    text-shadow: #000 4px 4px 5px ;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 850px;
+    text-align: center;
+    /* margin: 10px; */
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    color:#ee6730;
+    background-color: rgb(7, 20, 212);
+}
+
+main {
+    height: 300px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 10px;
+    /* margin: 30px; */
+    padding: 25px;
+    border: 8px solid black;
+    border-radius: 20px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+#result {
+    margin-top: 20px;
+    color: aliceblue;
+    text-align: center;
+    justify-content: center;
+    border: 8px solid black;
+    align-self: center;
+    width: 400px;
+    max-width: 800px;
+    height: 40px;
+    padding-top: 10px;
+    border-radius: 20px;
+}
+
+#question {
+    align-self: center;
+    height: 50px;
+    width: 800px;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    border: 8px solid black;
+    color:rgb(0, 0, 0);
+    background-color: rgb(75, 138, 194);
+    border-radius: 20px;
+    font-size: larger;
+}
+
+.choices {
+    width: 500px;
+    height: 80px;
+    gap: 10px;
+    justify-content: center;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: #ee6730;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+#score {
+    align-self: center;
+    width: 150px;
+    height: 40px;
+    border: 8px solid black;
+    /* margin-top: 3px; */
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+div p {
+    font-size: large;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(52, 239, 27);
+}
+
+#navigator {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: center;
+    width: 400px;
+    height: 50px;
+    /* margin: 0px; */
+    gap: 8px;
+
+}
+
+ #navigator button {
+    width: 80px;
+    height: 30px;
+    align-self: center;
+    background-color: rgb(238, 175, 93);
+    border: 3px solid black;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+#navigator button:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+}
