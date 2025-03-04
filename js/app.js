@@ -48,9 +48,9 @@ function startGame() {
     currentQuestIdx = 0;
     //reset score to 0
     score = 0;
-    //
+    //empty the result display
     elResult.textContent = "";
-    //
+    //display current score
     elScore.textContent = `Score: ${score}/${currentQuestIdx}`
     //reset the start button text content
     elStart.textContent = "start";

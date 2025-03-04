@@ -20,7 +20,7 @@ header {
     border: 8px solid rgb(0, 0, 0);
     border-radius: 20px;
     color:#c2903b;
-    background-color:rgb(101, 127, 149);
+    background-color:rgb(101, 127, 149);        
     font-weight: 1000;
 }
 
@@ -35,6 +35,8 @@ main {
     padding: 25px;
     border: 8px solid black;
     border-radius: 20px;
+    background-color:rgb(101, 127, 149);        
+
 }
 
 div {
@@ -83,7 +85,7 @@ div {
     height: 80px;
     gap: 10px;
     justify-content: center;
-    border: 5px solid rgb(97, 95, 95);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 10px;
     background-color: #ee6730;
     font-weight: 600;
@@ -113,7 +115,8 @@ div p {
 .choices:hover {
     cursor: pointer;
     background-color: rgb(52, 239, 27);
-    border: 8px solid rgb(29, 149, 47);
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 10px;
 }
 
 #navigator {
