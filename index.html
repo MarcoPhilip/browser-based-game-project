@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basketball Wizard</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/10823/10823177.png">
     <link rel="stylesheet" href="css/style.css"/>
     <script src="js/data.js" defer></script>
     <script defer src="js/app.js"></script>
@@ -13,21 +14,20 @@
     <header>
         <h1>basketball wizard</h1>
     </header>
-    <p id="question"></p>
+    <p id="question">Please click "START" to begin the quiz!</p>
     <main id="options">
-        <button class="choices" id="a"></button>
-        <button class="choices" id="b"></button>
-        <button class="choices" id="c"></button>
-        <button class="choices" id="d"></button>
+        <button class="choices" id="a" disabled></button>
+        <button class="choices" id="b" disabled></button>
+        <button class="choices" id="c" disabled></button>
+        <button class="choices" id="d" disabled></button>
     </main>
     <div>
     <p id="result"></p>
         <div id="navigator">
-            <button id="next-btn">next</button>
-            <!-- <button id="submit-btn">submit</button> -->
+            <button id="next-btn" hidden>next</button>
             <button id="start-btn">start</button>
         </div>
-    <p id="score"></p>
+    <p id="score">scoreboard</p>
     </div>
 </body>
 </html>

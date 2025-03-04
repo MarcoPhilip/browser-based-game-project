@@ -1,13 +1,12 @@
-// create the consts for all the id and classes
+// create the consts for all the ids and classes
 const elQuestion = document.querySelector("#question");
 const elChoices = document.querySelectorAll(".choices");
 const elResult = document.querySelector("#result");
 const elNext = document.querySelector("#next-btn");
-const elSubmit = document.querySelector("#submit-btn");
 const elStart = document.querySelector("#start-btn");
 const elScore = document.querySelector("#score");
 const elOptions = document.querySelector("#options");
-
+// assign variables into each button
 const buttonA = document.getElementById("a");
 const buttonB = document.getElementById("b");
 const buttonC = document.getElementById("c");
@@ -16,7 +15,6 @@ const buttonD = document.getElementById("d");
 //create the variables for scores
 let score = 0;
 let currentQuestIdx = 0;
-let answer = null;
 
 // add an event listener for each buttons when clicked
 elNext.addEventListener('click', nextQuestion);
@@ -44,14 +42,19 @@ elChoices.forEach(button =>  {
 
 //create a function when starting a quiz
 function startGame() {
-    // empty the score and current question idx
+    // enable the buttons
     enableBtns();
+    //reset the question idx    
     currentQuestIdx = 0;
+    //reset score to 0
     score = 0;
-    answer = null;
+    //
     elResult.textContent = "";
+    //
     elScore.textContent = `Score: ${score}/${currentQuestIdx}`
+    //reset the start button text content
     elStart.textContent = "start";
+    //restore the next button
     elNext.style.display = "unset";
     // assign the functions for later where the questions and choices will populate
     showQuestion();
@@ -70,6 +73,7 @@ function showQuestion() {
 };
 //create a function that will show the choices 
 function showAnswers() {
+    //enable the buttons;
     enableBtns();
     //display all the choices in each choices box
     buttonA.textContent = questions[currentQuestIdx].answers[0].choice;
@@ -77,7 +81,6 @@ function showAnswers() {
     buttonC.textContent = questions[currentQuestIdx].answers[2].choice;
     buttonD.textContent = questions[currentQuestIdx].answers[3].choice;
 
-    elChoices
 };
 
 //create a function for selecting an answer with parameter
@@ -89,6 +92,9 @@ function selectedAnswer(event) {
 
     //the var for the answers array
     let choices = questions[currentQuestIdx].answers;
+    //assign the trivia into a var
+    let answerTrivia = questions[currentQuestIdx].trivia;
+
     //loop through the answers array
     for (let i = 0; i < choices.length; i++) {
         //finding the correct answer from choices
@@ -101,7 +107,9 @@ function selectedAnswer(event) {
                 //display the current score 
                 elScore.textContent = `Score: ${score}/${currentQuestIdx + 1}`
                 //display the result for the question
-                elResult.textContent = "✅  That is the correct answer! ✅"
+                elResult.textContent = "✅  That is the correct answer! ✅";
+                //input the trivia in the question display
+                elQuestion.textContent = answerTrivia;
             }
             //if wrong
             else {
@@ -109,6 +117,8 @@ function selectedAnswer(event) {
                 elResult.textContent = "❌ Incorrect answer! ❌"
                 //display the current score
                 elScore.textContent = `Score: ${score}/${currentQuestIdx + 1}`
+                //input the trivia in the question display
+                elQuestion.textContent = answerTrivia;
             }
         }
     }
@@ -145,7 +155,10 @@ function endQuiz() {
     elResult.textContent = `Your Score: ${score} out of ${questions.length}`
     //hide the next button
     elNext.style.display = "none";
+    //change the start button to restart
     elStart.textContent = "restart"
+    //display the overall score in the score box
+    elScore.textContent = `Score: ${score}/${questions.length}`
 };
 
 
@@ -157,5 +170,6 @@ function enableBtns() {
         button.classList.remove("selected");
         //enable the buttons
         button.disabled = false;
+        //call out this function inside showQuestion()
     })
 };
