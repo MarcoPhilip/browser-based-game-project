@@ -203,3 +203,4 @@ const questions = [
         trivia: "Nikola Jokić is an active player for Serbia since the 2016 Rio de Janeiro Olympics."
     },
 ]
+

@@ -2,16 +2,19 @@ body {
     background: url(https://www.shutterstock.com/image-illustration/basketball-sport-arena-interior-view-600nw-1928721584.jpg);
     background-size:cover;
     background-position: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content:center;
 }
 
 header {
-    font-size:xx-large;
-    font-style: bold;
+    font-family: "Sigmar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:x-large;
     text-transform: uppercase;
-    text-shadow: #000 4px 4px 5px ;
+    text-shadow: #fd950c 2px 1px 15px ;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -19,7 +22,7 @@ header {
     text-align: center;
     border: 8px solid rgb(0, 0, 0);
     border-radius: 20px;
-    color:#c2903b;
+    color:#000000;
     background-color:rgb(101, 127, 149);        
     font-weight: 1000;
 }
@@ -36,7 +39,6 @@ main {
     border: 8px solid black;
     border-radius: 20px;
     background-color:rgb(101, 127, 149);        
-
 }
 
 div {
@@ -47,8 +49,9 @@ div {
 }
 
 #result {
+    font-family: "Big Shoulders", sans-serif;
     margin-top: 20px;
-    color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
     text-align: center;
     border: 8px solid black;
     align-self: center;
@@ -65,8 +68,8 @@ div {
 }
 
 #question {
+    font-family: "Big Shoulders", sans-serif;
     align-self: center;
-    height: 50px;
     width: 800px;
     justify-content: center;
     text-align: center;
@@ -81,6 +84,7 @@ div {
 }
 
 .choices {
+    font-family: "Big Shoulders", sans-serif;
     width: 500px;
     height: 80px;
     gap: 10px;
@@ -90,10 +94,11 @@ div {
     background-color: #ee6730;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: larger;
+    font-size: x-large;
 }
 
 #score {
+    font-family: "Big Shoulders", sans-serif;
     align-self: center;
     width: 150px;
     height: 40px;
@@ -152,4 +157,42 @@ div p {
 .wrong {
     background-color: #ee6730;
     color: #000;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        font-size: 1.5rem;
+        width: 95%;
+        align-self: center;
+        margin: 10px 10px;
+    }
+    #question {
+        width: 80%;
+        font-size: 1rem;
+        margin: 10px 10px;
+
+    }
+    main {
+        width: 85%;
+        margin: 10px 15px;
+
+    }
+    .choices {
+        width: 80%;
+        height: 70%;
+        font-size: 1.1rem;
+    }
+    #result {
+        width: 75%;
+        margin: 5px 5px;
+        font-size: .8rem;
+        padding-top: 18px;
+    }
+    #navigator {
+        padding: 2px;
+        gap: 25px;
+    }
+    #score {
+        margin: 5px;
+    }
 }
